@@ -1,15 +1,23 @@
+import axios from 'axios';
+import queryString from 'query-string';
+
 import ListArticles from '@/components/articles/ListArticles';
 import Search from '@/components/layouts/Search';
-import axios from 'axios';
 
-const getArticles = async () => {
-  const  { data } = await axios.get(`${process.env.API_URL}/api/articles`);
+const getArticles = async (searchParams) => {
+  const urlParams = {
+    keyword: searchParams.keyword,
+    page: searchParams.page
+  };
+  const searchQuery = queryString.stringify(urlParams)
+
+  const  { data } = await axios.get(`${process.env.API_URL}/api/articles?${searchQuery}`);
 
   return data;
 }
 
-const HomePage = async() => {
-  const articlesData = await getArticles();
+const HomePage = async({ searchParams }) => {
+  const articlesData = await getArticles(searchParams);
 
   return (
     <main className="grid grid-cols-3 p-4">
