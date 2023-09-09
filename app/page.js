@@ -1,4 +1,5 @@
 import ListArticles from '@/components/articles/ListArticles';
+import Search from '@/components/layouts/Search';
 import axios from 'axios';
 
 const getArticles = async () => {
@@ -12,6 +13,7 @@ const HomePage = async() => {
 
   return (
     <main className="grid grid-cols-3 p-4">
+      <Search />
       <ListArticles data={articlesData} />
     </main>
   )
