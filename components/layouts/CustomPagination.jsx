@@ -15,12 +15,7 @@ const CustomPagination = ({ resPerPage, articlesCount }) => {
   const handlePageChange = (currentPage) => {
     if (typeof window !== undefined) {
       queryParams = new URLSearchParams(window.location.search);
-
-      if (queryParams.has('page')) {
-        queryParams.set('page', currentPage);
-      } else {
-        queryParams.append('page', currentPage);
-      }
+      queryParams.has('page') ? queryParams.set('page', currentPage) : queryParams.append('page', currentPage);
 
       const path = `${window.location.pathname}?${queryParams.toString()}`
     
@@ -29,7 +24,7 @@ const CustomPagination = ({ resPerPage, articlesCount }) => {
   };
 
   return (
-    <div className="flex mt-20 justify-center">
+    <div className="flex mt-20 justify-center nutino-extra-bold text-gray-800">
       <Pagination
         activePage={page}
         itemsCountPerPage={resPerPage}
@@ -39,9 +34,9 @@ const CustomPagination = ({ resPerPage, articlesCount }) => {
         prevPageText={"Prev"}
         firstPageText={"First"}
         lastPageText={"Last"}
-        itemClass="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
-        activeLinkClassName="z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 text-sm font-medium text-indigo-600 focus:z-20"
-        activeClass="z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 text-sm font-medium text-indigo-600 focus:z-20"
+        itemClass="relative inline-flex items-center border border-gray-300 rounded-lg bg-white px-4 py-2 text-sm mr-5 font-medium text-gray-900 hover:bg-red-600 hover:text-white focus:z-20 transition-all"
+        activeLinkClassName="z-10 inline-flex items-center bg-gray-400 text-sm font-medium focus:z-20"
+        activeClass="z-10 inline-flex items-center text-sm font-medium bg-gray-300 focus:z-20"
       />
     </div>
   );
