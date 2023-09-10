@@ -33,7 +33,23 @@ const articleSchema = new mongoose.Schema({
   imageUrl: {
     type: String,
     required: [true, 'Please add image url']
-  }
+  },
+  readTime: {
+    type: Number,
+    required: [true, 'Please add read time']
+  },
+  comments: [
+    {
+      comment: {
+        type: String
+      },
+      responses: [
+        {
+          type: String
+        }
+      ]
+    }
+  ]
 });
 
 export default mongoose.models.Article || mongoose.model('Article', articleSchema);

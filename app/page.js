@@ -20,8 +20,8 @@ const HomePage = async({ searchParams }) => {
   const articlesData = await getArticles(searchParams);
 
   return (
-    <main className="grid grid-cols-3 p-4">
-      <Search />
+    <main className="container m-auto p-6">
+      {/* <Search /> */}
       <ListArticles data={articlesData} />
     </main>
   )
