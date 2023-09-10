@@ -24,7 +24,7 @@ const ArticleShort = ({ article }) =>  (
 
       <div>
         <p className="nutino-light text-gray-600">
-          <span>{dayjs(article.date).format('MMMM D, YYYY')} - </span>
+          <span className="nutino-extra-light-italic text-sm">{dayjs(article.date).format('MMMM D, YYYY')} - </span>
           {article.mainContent}
         </p>
       </div>
