@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "NutinoExtraBold";
+  src: url('../public/fonts/Nunito-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: "NutinoLigth";
+  src: url('../public/fonts/Nunito-Light.ttf');
+}
+
+@font-face {
+  font-family: "NutinoExtraLigth";
+  src: url('../public/fonts/Nunito-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: "NutinoExtraLigthItalic";
+  src: url('../public/fonts/Nunito-ExtraLightItalic.ttf');
+}
+
+.nutino-extra-bold {
+  font-family: 'NutinoExtraBold', sans-serif;
+}
+
+.nutino-light {
+  font-family: 'NutinoLigth', sans-serif;
+}
+
+.nutino-extra-light {
+  font-family: 'NutinoExtraLigth', sans-serif;
+}
+
+.nutino-extra-light-italic {
+  font-family: 'NutinoExtraLigthItalic', sans-serif;
+}
