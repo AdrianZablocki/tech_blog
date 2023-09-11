@@ -2,7 +2,7 @@ import Article from '../models/article';
 import APIFlters from '../utils/APIFilters';
 
 export const getArticles = async(req, res, next) => {
-  const resPerPage = 3;
+  const resPerPage = 5;
   const articlesCount = await Article.estimatedDocumentCount();
 
   const apiFilters = await new APIFlters(Article.find(), req.query)
