@@ -1,12 +1,11 @@
 import axios from 'axios';
 import queryString from 'query-string';
-
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
 
 import ListArticles from '@/components/articles/ListArticles';
-import Search from '@/components/layouts/Search';
+
+config.autoAddCss = false
 
 const getArticles = async (searchParams) => {
   const urlParams = {
@@ -24,13 +23,9 @@ const HomePage = async({ searchParams }) => {
   const articlesData = await getArticles(searchParams);
 
   return (
-    <>
-      <Search />
-      <main className="container m-auto p-6">
-        <ListArticles data={articlesData} />
-      </main>
-    </>
-  
+    <main className="container m-auto p-6">
+      <ListArticles data={articlesData} />
+    </main>
   )
 }
 

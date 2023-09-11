@@ -8,7 +8,7 @@ const ArticleShort = ({ article }) =>  (
   <article className="grid gap-2 grid-cols-5 mb-16 pb-8 border-b border-slid">
     <Image
       src={article.imageUrl}
-      alt="product anme"
+      alt="article image"
       height="240"
       width="240"
       priority={true}

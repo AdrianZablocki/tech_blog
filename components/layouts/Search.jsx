@@ -18,7 +18,7 @@ const Search = () => {
       onSubmit={submitHandler}
     >
       <input
-        className="flex-grow appearance-none border border-gray-200 bg-gray-100 rounded-md mr-2 py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400"
+        className="flex-grow appearance-none bg-gray-100 rounded-md mr-2 py-2 px-3 focus:outline-none focus:border-red-800 shadow-lg"
         type="text"
         placeholder="Enter your keyword"
         value={keyword}
@@ -26,7 +26,7 @@ const Search = () => {
       />
       <button
         type="button"
-        className="px-4 py-2 inline-block text-white border border-transparent bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        className="px-4 py-2 inline-block text-white border border-transparent bg-red-800 text-white rounded-md hover:bg-red-400 shadow-lg"
         onClick={submitHandler}
       >
         Search

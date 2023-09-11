@@ -11,12 +11,7 @@ const getArticle = async (id) => {
 const ArticlePage = async ({ params }) =>  {
   const article = await getArticle(params.id);
 
-  return (
-    <>
-      <a href='/'>go back</a>
-      <ArticleFull article={article} />
-    </>
-    )
+  return <ArticleFull article={article} />
 }
 
 export default ArticlePage;
