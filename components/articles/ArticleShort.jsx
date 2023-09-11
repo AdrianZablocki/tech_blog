@@ -31,8 +31,10 @@ const ArticleShort = ({ article }) =>  (
 
       <a 
         className="nutino-extra-bold text-blue-700 text-lg underline mt-4 inline-block" 
-        href={`article?id=${article._id}`}
-      >Read more...</a>
+        href={`article/${article._id}`}
+      >
+        Read more...
+      </a>
 
     </div>
 

@@ -24,10 +24,13 @@ const HomePage = async({ searchParams }) => {
   const articlesData = await getArticles(searchParams);
 
   return (
-    <main className="container m-auto p-6">
-      {/* <Search /> */}
-      <ListArticles data={articlesData} />
-    </main>
+    <>
+      <Search />
+      <main className="container m-auto p-6">
+        <ListArticles data={articlesData} />
+      </main>
+    </>
+  
   )
 }
 
