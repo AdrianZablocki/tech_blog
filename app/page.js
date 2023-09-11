@@ -15,7 +15,7 @@ const getArticles = async (searchParams) => {
   };
   const searchQuery = queryString.stringify(urlParams)
 
-  const  { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/articles?${searchQuery}`);
+  const  { data } = await axios.get(`${process.env.API_URL}/api/articles?${searchQuery}`);
 
   return data;
 }
