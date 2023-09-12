@@ -2,10 +2,14 @@
 
 import { usePathname } from 'next/navigation';
 import Search from './Search';
+import { categoryFilers } from './filters/filters-helper';
+import CategoryFilter from './filters/CategoryFilter';
 
 const Header = () => {
   const path = usePathname();
+  // const catFilters = categoryFilers.map(cat => <CategoryFilter options={}/>) 
 
+  console.log(categoryFilers)
   return (
     <header className="mb-10">
       <div className="flex justify-between items-center p-5 bg-red-600 shadow-md">
@@ -13,15 +17,13 @@ const Header = () => {
           <div className="text-white nutino-extra-bold text-2xl tracking-wider">Technology blog</div>
           <div className="text-white nutino-extra-light text-sm">All what you want to know about new technologies</div>
         </a>
-        {/* <span className="text-white nutino-extra-bold text-2xl tracking-wider">Technology blog</span> */}
         <Search />
       </div>
-      {path === "/" && <div>
-        <a href="?categories=angular">angular</a>
-        <a href="?categories=react">react</a>
-        <a href="?categories=vue">vue</a>
-        <a href="?categories=qwik">qwik</a>
-      </div>}
+      { path === "/" && 
+        <div className="flex px-5 py-3 shadow">
+          <CategoryFilter options={categoryFilers} />
+        </div>
+      }
     </header>
     
   )
