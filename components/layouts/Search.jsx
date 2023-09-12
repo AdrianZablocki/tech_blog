@@ -14,11 +14,11 @@ const Search = () => {
 
   return (
     <form
-      className="flex flex-nowrap items-center w-full order-last md:order-none mt-5 md:mt-0 md:w-2/4 lg:w-2/4"
+      className="flex flex-nowrap items-center md:order-none mt-5 md:mt-0"
       onSubmit={submitHandler}
     >
       <input
-        className="flex-grow appearance-none bg-gray-100 rounded-md mr-2 py-2 px-3 focus:outline-none focus:border-red-800 shadow-lg"
+        className="appearance-none bg-gray-100 rounded-md mr-2 py-2 px-3 focus:outline-none focus:border-red-800 shadow-lg"
         type="text"
         placeholder="Enter your keyword"
         value={keyword}
