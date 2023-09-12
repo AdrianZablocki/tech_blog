@@ -9,14 +9,14 @@ export const categoryFilers = [
   },
   {
     label: 'React',
-    value: '?categories=angular'
+    value: '?categories=react'
   },
   {
     label: 'Vue',
-    value: '?categories=angular'
+    value: '?categories=vue'
   },
   {
     label: 'Qwik',
-    value: '?categories=angular'
+    value: '?categories=qwik'
   }
 ];
