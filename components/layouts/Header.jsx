@@ -19,7 +19,7 @@ const Header = () => {
       </div>
       { path === "/" && 
         <div className="flex flex-wrap px-5 pb-3 shadow">
-          <CategoryFilter options={categoryFilers} />
+          <CategoryFilter options={categoryFilers} path={path} />
         </div>
       }
     </header>

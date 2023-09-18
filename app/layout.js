@@ -4,6 +4,9 @@ import './globals.css';
 export const metadata = {
   title: 'Tech_Blog',
   description: 'Blog about the new technologies',
+  icons: {
+    icon: '/favico.ico',
+  },
 }
 
 export default function RootLayout({ children }) {

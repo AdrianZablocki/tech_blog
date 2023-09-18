@@ -1,22 +1,18 @@
 export const categoryFilers = [
   {
-    label: 'All Categories',
-    value: '/'
-  },
-  {
-    label: 'Angular',
+    label: 'angular',
     value: '?categories=angular'
   },
   {
-    label: 'React',
+    label: 'react',
     value: '?categories=react'
   },
   {
-    label: 'Vue',
+    label: 'vue',
     value: '?categories=vue'
   },
   {
-    label: 'Qwik',
+    label: 'qwik',
     value: '?categories=qwik'
   }
 ];
