@@ -11,8 +11,8 @@ const ArticleFull = ({ article }) =>  {
           <FontAwesomeIcon className="text-red-600 w-4" icon={faArrowLeftLong} /> 
         </a>
         <span className="nutino-extra-bold text-red-600 text-md mr-3">{article.author}</span>
-        <span className="nutino-extra-light-italic text-sm mr-3">{dayjs(article.date).format('MMM D, YYYY')}</span>
-        <span className="nutino-extra-light text-sm">{article.comments.length} comments</span>
+        <span className="hidden md:inline-block nutino-extra-light-italic text-sm mr-3">{dayjs(article.date).format('MMM D, YYYY')}</span>
+        <span className="hidden md:inline-block nutino-extra-light text-sm">{article.comments.length} comments</span>
       </div>
       <h1 className="nutino-extra-bold text-black text-3xl mb-5">{article.title}</h1>
       <p className="mb-5 text-xl">{article.mainContent}</p>

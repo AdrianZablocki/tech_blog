@@ -23,6 +23,13 @@ const CustomPagination = ({ resPerPage, articlesCount }) => {
     }
   };
 
+  const setPageRange = () => {
+    if (typeof window !== undefined) {
+      return window.innerWidth > 767 ? 3 : 1;
+    }
+    return 3;
+  }
+
   return (
     <div className="flex mt-20 justify-center nutino-extra-bold text-gray-800">
       <Pagination
@@ -32,9 +39,9 @@ const CustomPagination = ({ resPerPage, articlesCount }) => {
         onChange={handlePageChange}
         nextPageText={"Next"}
         prevPageText={"Prev"}
-        firstPageText={"First"}
-        lastPageText={"Last"}
-        itemClass="relative inline-flex items-center border border-gray-300 rounded-lg bg-white px-4 py-2 text-sm mr-5 font-medium text-gray-900 hover:bg-red-600 hover:text-white focus:z-20 transition-all"
+        hideFirstLastPages
+        pageRangeDisplayed={setPageRange()}
+        itemClass="relative inline-flex items-center border border-gray-300 rounded-lg bg-white px-4 py-2 text-sm mx-2 font-medium text-gray-900 hover:bg-red-600 hover:text-white focus:z-20 transition-all"
         activeLinkClassName="z-10 inline-flex items-center bg-gray-400 text-sm font-medium focus:z-20"
         activeClass="z-10 inline-flex items-center text-sm font-medium bg-gray-300 focus:z-20"
       />

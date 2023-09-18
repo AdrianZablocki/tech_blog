@@ -9,7 +9,6 @@ import ListArticles from '@/components/articles/ListArticles';
 config.autoAddCss = false
 
 const getArticles = async (searchParams) => {
-  console.log(searchParams.categories)
   const urlParams = {
     keyword: searchParams.keyword,
     page: searchParams.page,

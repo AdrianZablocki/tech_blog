@@ -5,12 +5,12 @@ import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-regular-svg-icons';
 
 const ArticleShort = ({ article }) =>  (
-  <article className="grid gap-2 grid-cols-5 mb-16 pb-8 border-b border-slid">
+  <article className=" flex flex-col md:grid gap-2 grid-cols-5 mb-16 pb-8 border-b border-slid">
     <Image
       src={article.imageUrl}
       alt="article image"
-      height="240"
-      width="240"
+      height="300"
+      width="300"
       priority={true}
       className="col-start-1 col-end-2 pr-2"
     />
@@ -38,7 +38,7 @@ const ArticleShort = ({ article }) =>  (
 
     </div>
 
-    <div className="nutino-light text-gray-500 col-start-5 col-end-6 flex flex-col justify-start ml-6 text-sm">
+    <div className="nutino-light text-gray-500 col-start-5 col-end-6 flex flex-col justify-start ml-6 text-sm hidden md:block">
       <div className="mb-2">
         <FontAwesomeIcon className="text-red-600 mr-2 w-5" icon={faCalendarDays} /> 
         <span>{article.readTime} min read</span>
