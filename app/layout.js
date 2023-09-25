@@ -1,5 +1,7 @@
 import Header from '@/components/layouts/Header';
 import './globals.css';
+import robots from '@/robots';
+import sitemap from '@/sitemap';
 
 export const metadata = {
   title: 'Appsynth',
