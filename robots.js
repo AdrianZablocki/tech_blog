@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/'
     },
-    // sitemap: 'https://appsynth.pl/sitemap.xml'
+    sitemap: 'https://appsynth.pl/sitemap.xml'
   }
 }
